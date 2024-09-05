@@ -1,0 +1,6 @@
+@Chat_WebApi_React_HostAddress = http://localhost:5188
+
+GET {{Chat_WebApi_React_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

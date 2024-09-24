@@ -20,7 +20,7 @@ namespace Chat_WebApi_React
             {
                 opt.AddPolicy("reactApp", builder =>
                 {
-                    builder.WithOrigins("http://localhost:3000")
+                    builder.WithOrigins("http://localhost:3000") //т.к. клиентское приложение запускается по этому адресу
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials();
@@ -42,7 +42,7 @@ namespace Chat_WebApi_React
             app.UseAuthorization();
 
             app.MapControllers();
-            app.MapHub<ChatHub>("/Chat");
+            app.MapHub<ChatHub>("/Chat"); //связывание запросов и класса хаба
 
             app.UseCors("reactApp");
 
